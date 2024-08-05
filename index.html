@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipmnt Employee Table</title>
+    
+<script src="script.js" defer></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1 style="text-align:center"> Shipmnt Employee Data</h1>
+
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search">
+    </div>
+
+    <br>
+
+    <div class="filter-controls">
+        <div class="filter-container">
+        <label for="filter-column">Filter Column:</label>
+        <select id="filter-column">
+            <option value="id">ID</option>
+            <option value="age">Age</option>
+            <option value="projectsCompleted">Projects Completed</option>
+            <option value="name">Name</option>
+            <option value="role">Role</option>
+            <option value="hireDate">Hire Date</option>
+            <option value="isActive">Is Active</option>
+            <option value="salary">Salary</option>
+            <option value="department">Department</option>
+            <option value="lastLogin">Last Login</option>
+            <option value="accessLevel">Access Level</option>
+        </select>
+        
+        <label for="filter-type">Filter Type:</label>
+        <select id="filter-type"> 
+        </select>
+        <input type="text" id="filter-value1" placeholder="Value 1">
+        <input type="text" id="filter-value2" placeholder="Value 2" style="display: none;">
+    </div>
+        <br>
+        <center><button class= "button" onclick="applyfilters()">Apply Filters</button> </center>
+    </div>
+    <br>
+    <br>
+
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th onclick="sortable(0,'integer')">ID</th>
+                <th onclick="sortable(1,'string')">Name</th>
+                <th onclick="sortable(2,'integer')">Age</th>
+                <th onclick="sortable(3,'string')">Role</th>
+                <th onclick="sortable(4,'date')">Hire Date</th>
+                <th onclick="sortable(5,'boolean')">Active</th>
+                <th onclick="sortable(6,'integer')">Salary</th>
+                <th onclick="sortable(7,'string')">Department</th>
+                <th onclick="sortable(8,'integer')">Projects Completed</th>
+                <th onclick="sortable(9,'date')">Last Login</th>
+                <th onclick="sortable(10,'string')">Access Level</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <br>
+
+</body>
+</html>
